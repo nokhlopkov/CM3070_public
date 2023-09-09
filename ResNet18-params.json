@@ -1,0 +1,1 @@
+{"image_size": 224, "num_channels": 3, "learning_rate": 0.01, "weight_decay": 1e-05, "num_epochs": 30, "validation_epochs": 0, "batch_size": 256, "seed": 1}
