@@ -1,0 +1,2 @@
+GFLOPs: 2329.526883584
+Inference time: None

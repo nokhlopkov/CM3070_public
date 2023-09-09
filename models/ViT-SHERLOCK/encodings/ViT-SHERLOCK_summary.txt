@@ -1,0 +1,123 @@
+Model: "model_4"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ input_5 (InputLayer)           [(None, 224, 224, 3  0           []                               
+                                )]                                                                
+                                                                                                  
+ patches_8 (Patches)            (None, None, 768)    0           ['input_5[0][0]']                
+                                                                                                  
+ patch_encoder_8 (PatchEncoder)  (None, 196, 768)    741120      ['patches_8[0][0]']              
+                                                                                                  
+ tf.compat.v1.shape_4 (TFOpLamb  (3,)                0           ['patch_encoder_8[0][0]']        
+ da)                                                                                              
+                                                                                                  
+ tf.__operators__.getitem_4 (Sl  ()                  0           ['tf.compat.v1.shape_4[0][0]']   
+ icingOpLambda)                                                                                   
+                                                                                                  
+ tf.zeros_4 (TFOpLambda)        (None, 1)            0           ['tf.__operators__.getitem_4[0][0
+                                                                 ]']                              
+                                                                                                  
+ embedding_13 (Embedding)       (None, 1, 768)       768         ['tf.zeros_4[0][0]']             
+                                                                                                  
+ concatenate_4 (Concatenate)    (None, 197, 768)     0           ['embedding_13[0][0]',           
+                                                                  'patch_encoder_8[0][0]']        
+                                                                                                  
+ transformer_block_0 (Functiona  [(None, 197, 768),  7087872     ['concatenate_4[0][0]']          
+ l)                              (None, 12, None, N                                               
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_0 (La  (None, 197, 768)    0           ['transformer_block_0[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_1 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_0[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_1 (La  (None, 197, 768)    0           ['transformer_block_1[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_2 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_1[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_2 (La  (None, 197, 768)    0           ['transformer_block_2[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_3 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_2[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_3 (La  (None, 197, 768)    0           ['transformer_block_3[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_4 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_3[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_4 (La  (None, 197, 768)    0           ['transformer_block_4[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_5 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_4[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_5 (La  (None, 197, 768)    0           ['transformer_block_5[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_6 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_5[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_6 (La  (None, 197, 768)    0           ['transformer_block_6[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_7 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_6[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_7 (La  (None, 197, 768)    0           ['transformer_block_7[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_8 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_7[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_8 (La  (None, 197, 768)    0           ['transformer_block_8[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_9 (Functiona  [(None, 197, 768),  7087872     ['lambda_transformer_block_8[0][0
+ l)                              (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_9 (La  (None, 197, 768)    0           ['transformer_block_9[0][0]']    
+ mbda)                                                                                            
+                                                                                                  
+ transformer_block_10 (Function  [(None, 197, 768),  7087872     ['lambda_transformer_block_9[0][0
+ al)                             (None, 12, None, N              ]']                              
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_10 (L  (None, 197, 768)    0           ['transformer_block_10[0][0]']   
+ ambda)                                                                                           
+                                                                                                  
+ transformer_block_11 (Function  [(None, 197, 768),  7087872     ['lambda_transformer_block_10[0][
+ al)                             (None, 12, None, N              0]']                             
+                                one)]                                                             
+                                                                                                  
+ lambda_transformer_block_11 (L  (None, 197, 768)    0           ['transformer_block_11[0][0]']   
+ ambda)                                                                                           
+                                                                                                  
+ dense_49 (Dense)               (None, 197, 384)     295296      ['lambda_transformer_block_11[0][
+                                                                 0]']                             
+                                                                                                  
+ masked_auto_encoder_4 (MaskedA  (None, 196, 768)    16850688    ['dense_49[0][0]']               
+ utoEncoder)                                                                                      
+                                                                                                  
+ rearrange_patches_to_image_8 (  (None, 224, 224, 3)  0          ['masked_auto_encoder_4[0][0]']  
+ RearrangePatchesToImage)                                                                         
+                                                                                                  
+==================================================================================================
+Total params: 102,942,336
+Trainable params: 102,942,336
+Non-trainable params: 0
+__________________________________________________________________________________________________
