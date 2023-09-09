@@ -1,0 +1,51 @@
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ patches (Patches)           (None, None, 3072)        0         
+                                                                 
+ patch_encoder (PatchEncoder  (None, 49, 512)          1598464   
+ )                                                               
+                                                                 
+ transformer_block (Transfor  (None, 49, 512)          5253120   
+ merBlock)                                                       
+                                                                 
+ transformer_block_1 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_2 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_3 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_4 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_5 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_6 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ transformer_block_7 (Transf  (None, 49, 512)          5253120   
+ ormerBlock)                                                     
+                                                                 
+ layer_normalization_16 (Lay  (None, 49, 512)          1024      
+ erNormalization)                                                
+                                                                 
+ flatten (Flatten)           (None, 25088)             0         
+                                                                 
+ dropout_16 (Dropout)        (None, 25088)             0         
+                                                                 
+ mlp_8 (MLP)                 (None, 1024)              53480448  
+                                                                 
+ dense_19 (Dense)            (None, 696)               713400    
+                                                                 
+=================================================================
+Total params: 97,818,296
+Trainable params: 97,818,296
+Non-trainable params: 0
+_________________________________________________________________

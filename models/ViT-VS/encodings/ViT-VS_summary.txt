@@ -1,0 +1,48 @@
+Model: "model_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_2 (InputLayer)        [(None, 224, 224, 3)]     0         
+                                                                 
+ patches_2 (Patches)         (None, None, 3072)        0         
+                                                                 
+ patch_encoder_2 (PatchEncod  (None, 49, 512)          1598464   
+ er)                                                             
+                                                                 
+ transformer_block_12 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_13 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_14 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_15 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_16 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_17 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_18 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ transformer_block_19 (Trans  (None, 49, 512)          5253120   
+ formerBlock)                                                    
+                                                                 
+ dense_45 (Dense)            (None, 49, 256)           131328    
+                                                                 
+ masked_auto_encoder_1 (Mask  (None, 49, 3072)         6052864   
+ edAutoEncoder)                                                  
+                                                                 
+ rearrange_patches_to_image_  (None, 224, 224, 3)      0         
+ 2 (RearrangePatchesToImage)                                     
+                                                                 
+=================================================================
+Total params: 49,807,616
+Trainable params: 49,807,616
+Non-trainable params: 0
+_________________________________________________________________
