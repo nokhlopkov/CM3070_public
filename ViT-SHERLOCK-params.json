@@ -1,1 +1,0 @@
-{"image_size": 224, "num_channels": 3, "encoder_layers": 12, "decoder_layers": 4, "patch_size": 16, "encoder_projection_dim": 768, "decoder_projection_dim": 384, "num_heads": 6, "mask_rate": 0.0, "learning_rate": 0.0001, "weight_decay": 0.0001, "mlp_head_units": [2048, 1024], "num_epochs": 10, "validation_epochs": 0, "batch_size": 64, "seed": 1}
